@@ -1,0 +1,12 @@
+.imgProduct {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
