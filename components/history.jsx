@@ -97,6 +97,7 @@ const HistoryList = () => {
                     >
                       <tr>
                         <th>No.</th>
+                        <th>Item</th>
                         <th>Name</th>
                         <th>Qty</th>
                         <th> Price</th>
