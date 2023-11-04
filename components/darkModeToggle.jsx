@@ -37,7 +37,7 @@ export default function DarkModeToggle() {
   return (
     <>
       <button
-        className="bg-yellow-400 dark:bg-gray-800 text-white dark:text-gray-300 p-2 rounded-full border-2 border-white dark:border-gray-400 overflow-hidden"
+        className="bg-yellow-400 dark:bg-gray-800 text-white dark:text-gray-300 sm:p-2 p-1 rounded-full border-2 border-white dark:border-gray-400 overflow-hidden"
         onClick={toggleDarkMode}
       >
         {isDarkMode ? (

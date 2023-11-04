@@ -54,18 +54,22 @@ const ListProduct = ({ product }) => {
                   </div>
                 </div>
                 <div className="card-body">
-                  <h2 className="card-title text-yellow-400">$ {item.price}</h2>
-                  <p className="text-center">{item.title}</p>
+                  <h2 className="card-title text-yellow-400 sm:text-xl text-base">
+                    $ {item.price}
+                  </h2>
+                  <p className="sm:text-center text-keft sm:text-base text-sm">
+                    {item.title}
+                  </p>
 
                   <div className="card-actions justify-between mt-3">
                     <button
-                      className="btn bg-green-700 hover:bg-green-500 text-white"
+                      className="bg-green-700 hover:bg-green-500 text-white btn sm:btn-md btn-sm w-full sm:w-fit"
                       onClick={() => openModal(item)} // Open modal with selected item
                     >
                       Details
                     </button>
                     <button
-                      className="btn bg-yellow-400 hover:bg-yellow-600 text-white"
+                      className="btn sm:btn-md btn-sm bg-yellow-400 hover:bg-yellow-600 text-white w-full sm:w-fit"
                       onClick={() => addCart(item)}
                     >
                       <svg
@@ -108,12 +112,16 @@ const ListProduct = ({ product }) => {
             </div>
 
             <div className="py-4">
-              <p className="text-white font-bold">{selectedItem.title}</p>
+              <p className="text-white font-bold sm:text-base text-sm">
+                {selectedItem.title}
+              </p>
               <h3 className="font-bold text-lg text-yellow-400 text-right">
                 Price : $ {selectedItem.price}
               </h3>
               <p className="pt-3 font-bold">Description :</p>
-              <p className="text-justify">{selectedItem.description}</p>
+              <p className="text-justify sm:text-base text-sm">
+                {selectedItem.description}
+              </p>
             </div>
 
             <div className="flex justify-end">

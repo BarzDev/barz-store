@@ -10,3 +10,10 @@
   justify-content: center;
   background-color: #fff;
 }
+
+@media screen and (max-width: 400px) {
+  .imgProduct {
+    height: 100px;
+    width: 100px;
+  }
+}

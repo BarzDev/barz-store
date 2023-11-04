@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="navbar bg-base-100 px-5">
         <div className="flex-1">
           <Link
-            className="btn btn-ghost normal-case text-xl text-white dark:text-gray-300 "
+            className="btn btn-ghost normal-case sm:text-xl text-base text-white dark:text-gray-300 "
             href="/"
           >
             Barz Store
