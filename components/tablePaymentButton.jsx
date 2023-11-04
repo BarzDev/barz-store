@@ -41,7 +41,7 @@ const ButtonPayment = ({ totalPrice }) => {
     <button
       disabled={isDisablebutton()}
       onClick={() => handleCheckout()}
-      className="btn btn-accent text-gray-800 dark:text-whit disabled:bg-green-700 disabled:text-gray-400"
+      className="btn btn-accent text-gray-800 dark:text-white disabled:bg-green-700 disabled:text-gray-400 dark:disabled:text-gray-400"
     >
       Checkout
       <svg

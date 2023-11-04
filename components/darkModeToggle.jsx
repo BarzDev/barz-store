@@ -41,7 +41,7 @@ export default function DarkModeToggle() {
         onClick={toggleDarkMode}
       >
         {isDarkMode ? (
-          <Image src="dark.svg" width={21} height={21} />
+          <Image src="/dark2.png" width={21} height={21} />
         ) : (
           <Image src="sun2.svg" width={21} height={21} />
         )}

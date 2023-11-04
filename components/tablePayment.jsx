@@ -20,14 +20,14 @@ const Payment = () => {
         <div className="flex flex-row justify-between">
           <div className="">
             <div className="font-bold text-gray-800 dark:text-white">
-              <h1> TOTAL PRICE :</h1>
+              <h1>TOTAL PRICE : </h1>
             </div>
             <div className="font-bold text-lg text-yellow-500">
-              <h1> $ {totalPrice}</h1>
+              <h1>$ {totalPrice}</h1>
             </div>
           </div>
 
-          <div>
+          <div className="flex justify-center items-center">
             <ButtonPayment totalPrice={totalPrice} />
           </div>
         </div>

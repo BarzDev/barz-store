@@ -84,7 +84,7 @@ const TableCartList = () => {
                   </div>
                 </div>
               </td>
-              <td>{item.price}</td>
+              <td>${item.price}</td>
               <td>
                 <div className="flex justify-center gap-2 text-center">
                   <button

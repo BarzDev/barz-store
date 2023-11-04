@@ -15,9 +15,9 @@ const historyReducer = (state, action) => {
   }
 };
 
-// const currentDate = new Date(); // Mendapatkan tanggal saat ini
-// currentDate.setDate(currentDate.getDate() - 2); // Mengurangkan 2 hari dari tanggal saat ini
-// date: currentDate.toISOString(), // Mengubah tanggal menjadi format ISO
+const currentDate = new Date(); // Mendapatkan tanggal saat ini
+currentDate.setDate(currentDate.getDate() - 2); // Mengurangkan 2 hari dari tanggal saat ini
+const date = currentDate.toISOString(); // Mengubah tanggal menjadi format ISO
 
 const initialState = {
   transactionHistory: [
@@ -39,7 +39,7 @@ const initialState = {
       ],
 
       total: 78.29,
-      date: "2023-10-03T16:39:42.500Z",
+      date: currentDate.toISOString().split("T")[0] + "T16:39:42.500Z", // Gabungkan tanggal dari currentDate dengan waktu yang diinginkan
     },
     {
       cartItems: [
@@ -61,7 +61,7 @@ const initialState = {
         },
       ],
 
-      date: "2023-10-04T15:22:22.881Z",
+      date: currentDate.toISOString().split("T")[0] + "T15:22:22.881Z",
       total: 131.93,
     },
   ],
