@@ -5,15 +5,13 @@ import { useState } from "react";
 
 const HistoryList = () => {
   const { transactionHistory } = useHistory();
-  const [selectedItem, setSelectedItem] = useState(null); // State variable for selected item
+  const [selectedItem, setSelectedItem] = useState(null);
 
-  // Function to open the modal and set the selected item
   const openModal = (trx) => {
     setSelectedItem(trx);
     document.getElementById("my_modal").showModal();
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setSelectedItem(null);
     document.getElementById("my_modal").close();
@@ -39,13 +37,10 @@ const HistoryList = () => {
               </thead>
               <tbody>
                 {transactionHistory.map((trx, index) => {
-                  // Tanggal dalam format ISO 8601
                   const isoDateString = trx.date;
 
-                  // Buat objek Date dari string ISO 8601
                   const isoDate = new Date(isoDateString);
 
-                  // Format tanggal dalam format yang umum
                   const tanggal = isoDate.toLocaleDateString();
                   const jam = isoDate.toLocaleTimeString();
 
@@ -78,14 +73,12 @@ const HistoryList = () => {
           </div>
         </div>
 
-        {/* Open the modal using document.getElementById('ID').showModal() method */}
         <dialog id="my_modal" className="modal">
-          {selectedItem && ( // Conditionally render modal content if selectedItem is not null
-            <div className="modal-box">
+          {selectedItem && (
+            <div className="modal-box w-11/12 max-w-5xl">
               <div className="py-4 ">
-                <div className="overflow-x-auto max-h-96">
+                <div className="overflow-x-auto max-h-96 ">
                   <table className="table">
-                    {/* head */}
                     <thead
                       className="text-white text-base "
                       style={{
@@ -129,7 +122,8 @@ const HistoryList = () => {
                 </div>
               </div>
 
-              <div className="flex justify-end">
+              <div className="flex justify-between items-center">
+                <p className="font-bold">Total Price: $ {selectedItem.total}</p>
                 <button
                   className="btn btn-error text-white"
                   onClick={closeModal}
@@ -140,9 +134,11 @@ const HistoryList = () => {
               </div>
             </div>
           )}
-          <form method="dialog" className="modal-backdrop" onClick={closeModal}>
-            {/* Add some content for the backdrop */}
-          </form>
+          <form
+            method="dialog"
+            className="modal-backdrop"
+            onClick={closeModal}
+          ></form>
         </dialog>
       </div>
     </>

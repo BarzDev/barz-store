@@ -1,18 +1,15 @@
 "use client";
 
 import Image from "next/image";
-// components/DarkModeToggle.js
 import { useState, useEffect } from "react";
 
 export default function DarkModeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Cek apakah mode gelap sudah diaktifkan sebelumnya
     const savedDarkMode = localStorage.getItem("darkMode") === "true";
     setIsDarkMode(savedDarkMode);
 
-    // Terapkan mode gelap atau terang berdasarkan nilai yang disimpan di localStorage
     if (savedDarkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -20,13 +17,11 @@ export default function DarkModeToggle() {
     }
   }, []);
 
-  // Fungsi untuk mengganti mode gelap atau terang
   const toggleDarkMode = () => {
     const newDarkMode = !isDarkMode;
     setIsDarkMode(newDarkMode);
     localStorage.setItem("darkMode", newDarkMode);
 
-    // Terapkan mode gelap atau terang ke seluruh aplikasi
     if (newDarkMode) {
       document.documentElement.classList.add("dark");
     } else {

@@ -1,4 +1,5 @@
 import TableCartList from "./tableCartList";
+import NewTableCartList from "./tableCartList-new";
 
 const TableCart = () => {
   return (
@@ -9,7 +10,8 @@ const TableCart = () => {
           style={{ height: "60%" }}
         >
           <div className="overflow-auto max-h-80">
-            <TableCartList />
+            {/* <TableCartList /> */}
+            <NewTableCartList />
           </div>
         </div>
       </div>

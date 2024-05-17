@@ -28,7 +28,7 @@ const TableCartList = () => {
       showCancelButton: true,
       denyButtonText: "Remove",
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
+
       if (result.isDenied) {
         Swal.fire(
           { icon: "error", title: "Item Removed" },
